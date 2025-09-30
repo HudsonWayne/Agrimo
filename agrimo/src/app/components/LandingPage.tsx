@@ -88,6 +88,9 @@ export default function LandingPage() {
           Quality Trust: <br /> Direct to the Farm
         </h1>
 
+        {/* Styled HR */}
+        <hr className="bg-white h-2 w-52 border-none mb-6" />
+
         <p className="text-lg max-w-xl mb-6">
           We all need a little space to grow. Give yourself the space you need
           to find your inner you.
