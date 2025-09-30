@@ -1,7 +1,5 @@
 // components/LandingPage.tsx
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Phone, Search } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -9,7 +7,7 @@ export default function LandingPage() {
       {/* Background with blue overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/farm-bg.jpg" // replace with your background image path
+          src="/Image.png" // replace with your background image path
           alt="Farm background"
           fill
           className="object-cover"
@@ -38,13 +36,13 @@ export default function LandingPage() {
         {/* Right section */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm">
-            <Phone className="w-4 h-4 text-green-400" />
+            <span className="text-green-400">📞</span>
             <span>+1 (212) 255-511</span>
           </div>
-          <Search className="cursor-pointer hover:text-green-400" />
-          <Button className="bg-yellow-300 text-black rounded-full px-6 py-2 shadow-md">
+          <span className="cursor-pointer hover:text-green-400">🔍</span>
+          <button className="bg-yellow-300 text-black rounded-full px-6 py-2 shadow-md hover:bg-yellow-400 transition">
             Get In Touch ✈
-          </Button>
+          </button>
         </div>
       </nav>
 
@@ -63,9 +61,9 @@ export default function LandingPage() {
           to find your inner you.
         </p>
 
-        <Button className="bg-white text-black rounded-full px-6 py-3 shadow-md">
+        <button className="bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition">
           Contact Us ✈
-        </Button>
+        </button>
       </div>
     </div>
   );
