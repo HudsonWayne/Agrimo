@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.black {
+  height: 90px;
+  width: 200px;
+
+  /* Center content */
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically center */
+
+  /* Curved corners */
+  border-top-left-radius: 20px;   /* top-left corner */
+  border-bottom-right-radius: 20px; /* bottom-right corner */
+
+  /* Optional styling */
+  background-color: white;
+}
