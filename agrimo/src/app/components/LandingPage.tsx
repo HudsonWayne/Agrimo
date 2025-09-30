@@ -89,7 +89,7 @@ export default function LandingPage() {
         </h1>
 
         {/* Styled HR */}
-        <hr className="bg-white h-2 w-52 border-none mb-6" />
+        <hr className="bg-white h-1 w-112 border-none mb-6" />
 
         <p className="text-lg max-w-xl mb-6">
           We all need a little space to grow. Give yourself the space you need
