@@ -29,11 +29,13 @@ export default function LandingPage() {
   />
 </div>
 
-        {/* Menu */}
-        <ul className="hidden md:flex gap-8 font-medium">
-  <li className="flex items-center gap-2 cursor-pointer text-green-400">
-    <span className="text-green-400">•</span> HOME
+<ul className="hidden md:flex gap-8 font-medium">
+  {/* Active link */}
+  <li className="flex items-center gap-2 cursor-pointer text-[#EDDD5E]">
+    <span className="text-[#EDDD5E]">•</span> HOME
   </li>
+
+  {/* Other links */}
   <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
     <span className="text-white group-hover:text-green-400">•</span> PAGES
   </li>
@@ -50,6 +52,7 @@ export default function LandingPage() {
     <span className="text-white group-hover:text-green-400">•</span> CONTACT US
   </li>
 </ul>
+
 
 
         {/* Right section */}
