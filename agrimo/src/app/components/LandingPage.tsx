@@ -13,47 +13,45 @@ export default function LandingPage() {
           className="object-cover"
           priority
         />
-        
       </div>
 
       {/* Navbar */}
       <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-white z-20">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold">
-  <Image
-    src="/logo.png"
-    alt="Agrimo Logo"
-    width={70}   // adjust size
-    height={70}
-    className="object-contain"
-  />
-</div>
+          <Image
+            src="/logo.png"
+            alt="Agrimo Logo"
+            width={70}
+            height={70}
+            className="object-contain"
+          />
+        </div>
 
-<ul className="hidden md:flex gap-8 font-medium">
-  {/* Active link */}
-  <li className="flex items-center gap-2 cursor-pointer text-[#EDDD5E]">
-    <span className="text-[#EDDD5E]">•</span> HOME
-  </li>
+        {/* Menu */}
+        <ul className="hidden md:flex gap-8 font-medium">
+          {/* Active link */}
+          <li className="flex items-center gap-2 cursor-pointer text-[#EDDD5E]">
+            <span className="text-[#EDDD5E]">•</span> HOME
+          </li>
 
-  {/* Other links */}
-  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
-    <span className="text-white group-hover:text-green-400">•</span> PAGES
-  </li>
-  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
-    <span className="text-white group-hover:text-green-400">•</span> SERVICES
-  </li>
-  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
-    <span className="text-white group-hover:text-green-400">•</span> PORTFOLIO
-  </li>
-  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
-    <span className="text-white group-hover:text-green-400">•</span> BLOG
-  </li>
-  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
-    <span className="text-white group-hover:text-green-400">•</span> CONTACT US
-  </li>
-</ul>
-
-
+          {/* Other links */}
+          <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+            <span className="text-white group-hover:text-green-400">•</span> PAGES
+          </li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+            <span className="text-white group-hover:text-green-400">•</span> SERVICES
+          </li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+            <span className="text-white group-hover:text-green-400">•</span> PORTFOLIO
+          </li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+            <span className="text-white group-hover:text-green-400">•</span> BLOG
+          </li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+            <span className="text-white group-hover:text-green-400">•</span> CONTACT US
+          </li>
+        </ul>
 
         {/* Right section */}
         <div className="flex items-center gap-6">
@@ -74,7 +72,19 @@ export default function LandingPage() {
           Believe in Quality!
         </button>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
+        {/* Custom-styled h1 */}
+        <h1
+          className="mb-4"
+          style={{
+            fontFamily: "Signika, sans-serif",
+            fontWeight: 500,
+            fontStyle: "normal",
+            fontSize: "100px",
+            lineHeight: "100px",
+            letterSpacing: "0%",
+            verticalAlign: "middle",
+          }}
+        >
           Quality Trust: <br /> Direct to the Farm
         </h1>
 
