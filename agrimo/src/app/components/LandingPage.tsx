@@ -13,25 +13,44 @@ export default function LandingPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-blue-900/50" />
+        
       </div>
 
       {/* Navbar */}
       <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-white z-20">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold">
-          <span className="text-green-400">🌱</span> grimo
-        </div>
+  <Image
+    src="/logo.png"
+    alt="Agrimo Logo"
+    width={70}   // adjust size
+    height={70}
+    className="object-contain"
+  />
+</div>
 
         {/* Menu */}
         <ul className="hidden md:flex gap-8 font-medium">
-          <li className="hover:text-green-400 cursor-pointer">HOME</li>
-          <li className="hover:text-green-400 cursor-pointer">PAGES</li>
-          <li className="hover:text-green-400 cursor-pointer">SERVICES</li>
-          <li className="hover:text-green-400 cursor-pointer">PORTFOLIO</li>
-          <li className="hover:text-green-400 cursor-pointer">BLOG</li>
-          <li className="hover:text-green-400 cursor-pointer">CONTACT US</li>
-        </ul>
+  <li className="flex items-center gap-2 cursor-pointer text-green-400">
+    <span className="text-green-400">•</span> HOME
+  </li>
+  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+    <span className="text-white group-hover:text-green-400">•</span> PAGES
+  </li>
+  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+    <span className="text-white group-hover:text-green-400">•</span> SERVICES
+  </li>
+  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+    <span className="text-white group-hover:text-green-400">•</span> PORTFOLIO
+  </li>
+  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+    <span className="text-white group-hover:text-green-400">•</span> BLOG
+  </li>
+  <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">
+    <span className="text-white group-hover:text-green-400">•</span> CONTACT US
+  </li>
+</ul>
+
 
         {/* Right section */}
         <div className="flex items-center gap-6">
