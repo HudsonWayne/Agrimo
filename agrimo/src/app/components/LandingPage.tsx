@@ -1,9 +1,12 @@
+"use client"; // Make this a client component
+
 // components/LandingPage.tsx
 import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden m-[20px] rounded-[40px]">
+
       {/* Background with blue overlay */}
       <div className="absolute inset-0">
         <Image
@@ -22,8 +25,8 @@ export default function LandingPage() {
           <Image
             src="/logo.png"
             alt="Agrimo Logo"
-            width={70}
-            height={70}
+            width={90}
+            height={90}
             className="object-contain"
           />
         </div>
@@ -61,25 +64,23 @@ export default function LandingPage() {
           </div>
           <span className="cursor-pointer hover:text-green-400">🔍</span>
 
-
-          <div className="black bg-white ">
+          <div className="black bg-white">
             <button className="bg-yellow-300 text-black rounded-full px-6 py-2 shadow-md hover:bg-yellow-400 transition">
-            Get In Touch ✈
-          </button>
+              Get In Touch ✈
+            </button>
           </div>
-          
         </div>
       </nav>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24 text-white">
-        <button className="px-4 py-2 border border-white rounded-full text-xs uppercase tracking-wide mb-4 hover:bg-white hover:text-black transition">
+        <button className="px-4 py-2 border border-white rounded-full text-xs uppercase tracking-wide mb-4 hover:bg-white hover:text-black transition animate-bounce-slow">
           Believe in Quality!
         </button>
 
         {/* Custom-styled h1 */}
         <h1
-          className="mb-4"
+          className="mb-4 animate-move-text"
           style={{
             fontFamily: "Signika, sans-serif",
             fontWeight: 500,
@@ -96,17 +97,67 @@ export default function LandingPage() {
         {/* Styled HR */}
         <hr className="bg-white h-0.5 w-[700px] border-none mb-6" />
 
-
-
-        <p className="text-lg max-w-xl mb-6">
+        <p className="text-lg max-w-xl mb-6 animate-move-text">
           We all need a little space to grow. Give yourself the space you need
           to find your inner you.
         </p>
 
-        <button className="bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition">
+        <button className="glow-button bg-white text-black rounded-full px-6 py-3 shadow-md transition duration-500">
           Contact Us ✈
         </button>
       </div>
+
+      <style jsx>{`
+        .black {
+          height: 100px;
+          width: 200px;
+          margin-top: -25px;
+          margin-left: 50px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border-top-right-radius: 40px;
+          border-bottom-left-radius: 40px;
+
+          background-color: white;
+        }
+
+        /* Text movement animation */
+        @keyframes moveText {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+
+        .animate-move-text {
+          animation: moveText 3s ease-in-out infinite;
+        }
+
+        /* Button glowing animation */
+        @keyframes glow {
+          0%, 100% {
+            box-shadow: 0 0 15px #ffe600;
+          }
+          50% {
+            box-shadow: 0 0 35px #ffe600;
+          }
+        }
+
+        .glow-button {
+          animation: glow 2s infinite;
+        }
+
+        /* Optional slower bounce for small button */
+        @keyframes bounceSlow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+
+        .animate-bounce-slow {
+          animation: bounceSlow 3s infinite;
+        }
+      `}</style>
     </div>
   );
 }

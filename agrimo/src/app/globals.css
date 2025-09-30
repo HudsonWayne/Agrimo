@@ -19,14 +19,32 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* prevent overflow from padding/margins */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .black {
-  height: 90px;
+  height: 80px;
   width: 200px;
+
+  /* Move the div */
+  margin-top: -25px;
+  margin-left: 80px; /* original 50px + 30px shift to the right */
 
   /* Center content */
   display: flex;
@@ -34,9 +52,9 @@ body {
   align-items: center;     /* vertically center */
 
   /* Curved corners */
-  border-top-left-radius: 20px;   /* top-left corner */
-  border-bottom-right-radius: 20px; /* bottom-right corner */
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 
-  /* Optional styling */
   background-color: white;
 }
+
