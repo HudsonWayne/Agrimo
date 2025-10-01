@@ -43,7 +43,7 @@ body {
   width: 200px;
 
   /* Move the div */
-  margin-top: -25px;
+  /* margin-top: -25px; */
   margin-left: 80px; /* original 50px + 30px shift to the right */
 
   /* Center content */

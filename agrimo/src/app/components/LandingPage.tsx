@@ -73,7 +73,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24 text-white">
+      <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24 text-white ml-[130px]">
         <button className="px-4 py-2 border border-white rounded-full text-xs uppercase tracking-wide mb-4 hover:bg-white hover:text-black transition animate-bounce-slow">
           Believe in Quality!
         </button>
@@ -112,7 +112,7 @@ export default function LandingPage() {
           height: 100px;
           width: 200px;
           margin-top: -25px;
-          margin-left: 50px;
+          margin-left: 80px; /* ✅ reads margin-left here */
 
           display: flex;
           justify-content: center;
